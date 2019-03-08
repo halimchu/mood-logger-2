@@ -26,4 +26,9 @@ module.exports = {
       }
     ]
   }
+
+  // what i added in
+  // loaders: [
+  //   { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+  // ]
 }
