@@ -32,6 +32,7 @@ class Home extends Component {
   }
 
   handleSubmit(event) {
+    console.log(this.state)
     event.preventDefault()
     const emotion = this.state
     this.props.addEmotionToDatabase(emotion)
@@ -62,7 +63,11 @@ class Home extends Component {
               value={this.state.journalEntry}
               onChange={this.handleChange}
             />
-            <button type="button" onClick={this.handleSubmit}>
+            <button
+              className="waves-effect waves-light btn-large"
+              type="button"
+              onClick={this.handleSubmit}
+            >
               Submit
             </button>
           </form>

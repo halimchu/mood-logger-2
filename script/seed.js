@@ -17,7 +17,8 @@ async function seed() {
       color: 'blue',
       day: 'Monday',
       number: 5,
-      journalEntry: 'I was feeling really happy today.',
+      journalEntry:
+        'Lorem ipsum dolor sit amet, vix no eloquentiam consectetuer, est fabellas explicari ne. Dicam homero cetero ea vis, cu omnium accusam cum, quo ne pertinacia mediocritatem. Quo in liber mundi oblique, eripuit abhorreant sea ne. Vel hinc iisque petentium et',
       imageUrl: '',
       userId: 1
     }),
@@ -25,7 +26,8 @@ async function seed() {
       color: 'yellow',
       day: 'Tuesday',
       number: 2,
-      journalEntry: 'I felt not that great today',
+      journalEntry:
+        'Sed id agam quidam. Aliquid omittam ei nec, ea cum stet veri reque, nec ne nostro aliquando. Ne mea omnis complectitur. Assum persecuti argumentum quo ei, ne nec vero meis appellantur, mel purto mundi ad',
       imageUrl: '',
       userId: 2
     }),
@@ -33,7 +35,8 @@ async function seed() {
       color: 'red',
       day: 'Monday',
       number: 3,
-      journalEntry: 'I am feeling neutral.',
+      journalEntry:
+        'Ut has nobis dolore fierent. Facete tractatos explicari te vim. Pri id aliquip nominavi, velit noster molestiae est ut. Cu indoctum tincidunt dissentiet qui, no tempor repudiare his. Elitr eligendi ad vim, inani pertinacia an vel',
       imageUrl: '',
       userId: 1
     }),
@@ -41,7 +44,8 @@ async function seed() {
       color: 'orange',
       day: 'Monday',
       number: 4,
-      journalEntry: 'Today was a good day',
+      journalEntry:
+        'Nec lucilius pertinax vituperata ne. At vis vocibus deterruisset. Sit prodesset forensibus adversarium ne. His cibo elitr offendit ut, dicat vitae vis in. Utamur prompta imperdiet nec id, ut eos omittam voluptatibus, mel te quem forensibus',
       imageUrl: '',
       userId: 2
     })

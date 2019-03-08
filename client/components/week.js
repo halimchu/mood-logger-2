@@ -26,9 +26,18 @@ class Week extends Component {
         {this.props.emotions.map(emotion => {
           return (
             <div key={emotion.id}>
-              <div id="colors-list">
-                <Smiley color={emotion.color} number={emotion.number} />
-                {emotion.number}
+              <div className="row">
+                <div className="col s3">
+                  <div id="colors-list">
+                    <Smiley color={emotion.color} number={emotion.number} />
+                  </div>
+                </div>
+
+                <div className="col s1">{emotion.number}</div>
+
+                <div className="col s7">
+                  <p className="truncate">{emotion.journalEntry}</p>
+                </div>
               </div>
             </div>
           )
