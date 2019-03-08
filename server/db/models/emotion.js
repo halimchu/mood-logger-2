@@ -18,6 +18,9 @@ const Emotion = db.define('emotion', {
   },
   imageUrl: {
     type: Sequelize.STRING
+  },
+  checkedLifeEvent: {
+    type: Sequelize.STRING
   }
 })
 

@@ -34,7 +34,7 @@ form div {
 }
 
 /* colors */
-.red {
+/* .red {
   background-color: #cf000f;
 }
 .orange {
@@ -57,4 +57,9 @@ form div {
 }
 .white {
   background-color: #ffffff;
+} */
+
+#red {
+  z-index: 500;
+  background-color: #cf000f;
 }
