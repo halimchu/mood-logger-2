@@ -9,7 +9,7 @@ const Emotion = db.define('emotion', {
     type: Sequelize.STRING
   },
   number: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false
   },
   journalEntry: {
@@ -19,8 +19,8 @@ const Emotion = db.define('emotion', {
   imageUrl: {
     type: Sequelize.STRING
   },
-  checkedLifeEvent: {
-    type: Sequelize.STRING
+  lifeStressors: {
+    type: Sequelize.ARRAY(Sequelize.TEXT)
   }
 })
 

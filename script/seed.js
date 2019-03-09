@@ -20,6 +20,7 @@ async function seed() {
       journalEntry:
         'Lorem ipsum dolor sit amet, vix no eloquentiam consectetuer, est fabellas explicari ne. Dicam homero cetero ea vis, cu omnium accusam cum, quo ne pertinacia mediocritatem. Quo in liber mundi oblique, eripuit abhorreant sea ne. Vel hinc iisque petentium et',
       imageUrl: '',
+      lifeStressors: ['Married', 'Divorced'],
       userId: 1
     }),
     Emotion.create({

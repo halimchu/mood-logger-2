@@ -6,7 +6,15 @@ module.exports = router
 router.get('/', async (req, res, next) => {
   try {
     const emotions = await Emotion.findAll({
-      attributes: ['id', 'color', 'day', 'number', 'journalEntry', 'imageUrl']
+      attributes: [
+        'id',
+        'color',
+        'day',
+        'number',
+        'journalEntry',
+        'imageUrl',
+        'lifeStressors'
+      ]
     })
     res.json(emotions)
   } catch (err) {
@@ -18,9 +26,41 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     console.log('REQ.BODYYYY', req.body)
-    const emotion = await Emotion.create(req.body)
+
+    let lifeStressors = []
+    for (let i = 4; i < Object.entries(req.body).length; ++i) {
+      lifeStressors.push(Object.entries(req.body)[i][0])
+    }
+
+    const newReq = {
+      number: req.body.number,
+      color: req.body.color,
+      journalEntry: req.body.journalEntry,
+      lifeStressors: lifeStressors
+    }
+
+    console.log('NEWREQ', newReq)
+
+    const emotion = await Emotion.create(newReq)
+    // const emotion = await Emotion.create(req.body)
     res.json(emotion)
   } catch (error) {
     next(error)
   }
 })
+
+// NEWREQ {
+//   number: '',
+//   color: '',
+//   journalEntry: '',
+//   lifeStressors: [ 'Married', 'Divorced' ] }
+
+// REQ.BODYYYY
+// {
+//   number: '',
+//   color: '',
+//   displayQuestion: false,
+//   journalEntry: '',
+//   Married: 'Married',
+//   Divorced: 'Divorced'
+// }
