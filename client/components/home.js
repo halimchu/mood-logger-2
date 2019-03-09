@@ -88,7 +88,17 @@ class Home extends Component {
         <div>{this.state.displayQuestion && <Question />}</div>
 
         <LifeStressors
-          value={[this.state.Married, this.state.Divorced]}
+          value={[
+            this.state.Married,
+            this.state.Divorced,
+            this.state['Job Loss'],
+            this.state['Chronic Illness'],
+            this.state.Moved,
+            this.state.Death,
+            this.state.Retirement,
+            this.state.Pregnancy,
+            this.state.Finances
+          ]}
           handleCheck={this.handleCheck}
         />
 

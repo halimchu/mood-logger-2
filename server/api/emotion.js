@@ -39,28 +39,9 @@ router.post('/', async (req, res, next) => {
       lifeStressors: lifeStressors
     }
 
-    console.log('NEWREQ', newReq)
-
     const emotion = await Emotion.create(newReq)
-    // const emotion = await Emotion.create(req.body)
     res.json(emotion)
   } catch (error) {
     next(error)
   }
 })
-
-// NEWREQ {
-//   number: '',
-//   color: '',
-//   journalEntry: '',
-//   lifeStressors: [ 'Married', 'Divorced' ] }
-
-// REQ.BODYYYY
-// {
-//   number: '',
-//   color: '',
-//   displayQuestion: false,
-//   journalEntry: '',
-//   Married: 'Married',
-//   Divorced: 'Divorced'
-// }
