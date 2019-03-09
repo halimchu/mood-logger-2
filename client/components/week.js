@@ -4,41 +4,25 @@ import {getEmotionsWeekThunk} from '../store/emotion'
 import Smiley from './smiley'
 
 class Week extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     this.props.getEmotionsWeek()
   }
 
   render() {
-    console.log(this.props)
+    const {emotions} = this.props
+    console.log(emotions)
 
-    // const emotionsList = this.props.emotions.map(emotion => {
-    //   return (
-    //     emotion.number
-    //   )
-    // })
     return (
       <div>
         Week
-        {this.props.emotions.map(emotion => {
+        {emotions.map(emotion => {
           return (
-            <div key={emotion.id}>
-              <div className="row">
-                <div className="col s3">
-                  <div id="colors-list">
-                    <Smiley color={emotion.color} number={emotion.number} />
-                  </div>
-                </div>
-
-                <div className="col s1">{emotion.number}</div>
-
-                <div className="col s7">
-                  <p className="truncate">{emotion.journalEntry}</p>
-                </div>
-              </div>
+            <div id="colors-list" key={emotion.id}>
+              <Smiley
+                color={emotion.color}
+                number={emotion.number}
+                selectFace={this.selectFace}
+              />
             </div>
           )
         })}

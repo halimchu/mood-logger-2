@@ -3,11 +3,17 @@ import axios from 'axios'
 // ACTIONS
 const ADD_EMOTION_TO_DATABASE = 'ADD_EMOTION_TO_DATABASE'
 const GET_EMOTIONS_FROM_DATABASE = 'GET_EMOTION_FROM_DATABASE'
+const GET_EMOTION_TODAY = 'GET_EMOTION_TODAY'
 const GET_EMOTIONS_WEEK = 'GET_EMOTIONS_WEEK'
 
 // ACTION CREATORS
 const addEmotionToDatabase = emotion => ({
   type: ADD_EMOTION_TO_DATABASE,
+  emotion
+})
+
+const getEmotionToday = emotion => ({
+  type: GET_EMOTION_TODAY,
   emotion
 })
 
@@ -24,6 +30,14 @@ export const addEmotionToDatabaseThunk = emotion => {
   }
 }
 
+export const getEmotionTodayThunk = () => {
+  return async dispatch => {
+    const response = await axios.get('/api/emotions/today')
+    const emotion = response.data
+    dispatch(getEmotionToday(emotion))
+  }
+}
+
 export const getEmotionsWeekThunk = () => {
   return async dispatch => {
     const response = await axios.get('/api/emotions')
@@ -35,13 +49,16 @@ export const getEmotionsWeekThunk = () => {
 
 // INITIAL STATE
 const initialState = {
-  emotions: []
-  // emotion: {}
+  emotions: [],
+  emotion: {}
 }
 
 // REDUCER
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case GET_EMOTION_TODAY: {
+      return {...state, emotion: action.emotion}
+    }
     case GET_EMOTIONS_WEEK: {
       return {...state, emotions: action.emotions}
     }

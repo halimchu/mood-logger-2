@@ -1,31 +1,49 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Checkbox from './checkbox'
 
-class Question extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-  }
+const Question = props => {
+  return (
+    <div>
+      <h5>
+        Question 1: Do you have little interest or pleasure in doing things?
+      </h5>
 
-  render() {
-    return (
-      <form>
-        <input />
-      </form>
-    )
-  }
+      <div className="row">
+        <div className="col s3">
+          <label>
+            <Checkbox name="Question1" />
+            <span>Yes</span>
+          </label>
+        </div>
+
+        <div className="col s3">
+          <label>
+            <Checkbox name="Question1" />
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+
+      <h5>
+        Question 2: Do you have little interest or pleasure in doing things?
+      </h5>
+      <div className="row">
+        <div className="col s3">
+          <label>
+            <Checkbox name="Question2" />
+            <span>Yes</span>
+          </label>
+        </div>
+
+        <div className="col s3">
+          <label>
+            <Checkbox name="Question1" />
+            <span>No</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  )
 }
-
-{
-  /* <form onSubmit={this.handleSubmit}>
-          <label htmlFor='username'>Username:</label>
-
-
-          {/* input component */
-}
-// <input type='text' name='username' value={this.state.username} onChange={this.handleChange} />
-// {/* const {type, name, value} = props */}
-
-// <button type='submit'>Submit</button> */}
 
 export default Question

@@ -15,39 +15,68 @@ async function seed() {
   const entries = await Promise.all([
     Emotion.create({
       color: 'blue',
-      day: 'Monday',
       number: 5,
       journalEntry:
         'Lorem ipsum dolor sit amet, vix no eloquentiam consectetuer, est fabellas explicari ne. Dicam homero cetero ea vis, cu omnium accusam cum, quo ne pertinacia mediocritatem. Quo in liber mundi oblique, eripuit abhorreant sea ne. Vel hinc iisque petentium et',
       imageUrl: '',
       lifeStressors: ['Married', 'Divorced'],
+      date: '2/7/2019',
+      day: 'Thursday',
       userId: 1
     }),
     Emotion.create({
       color: 'yellow',
-      day: 'Tuesday',
-      number: 2,
+      number: 3,
       journalEntry:
         'Sed id agam quidam. Aliquid omittam ei nec, ea cum stet veri reque, nec ne nostro aliquando. Ne mea omnis complectitur. Assum persecuti argumentum quo ei, ne nec vero meis appellantur, mel purto mundi ad',
       imageUrl: '',
+      lifeStressors: ['Married', 'Divorced'],
+      date: '3/9/2019',
+      day: 'Saturday',
       userId: 2
     }),
     Emotion.create({
       color: 'red',
-      day: 'Monday',
-      number: 3,
+      number: 1,
       journalEntry:
         'Ut has nobis dolore fierent. Facete tractatos explicari te vim. Pri id aliquip nominavi, velit noster molestiae est ut. Cu indoctum tincidunt dissentiet qui, no tempor repudiare his. Elitr eligendi ad vim, inani pertinacia an vel',
       imageUrl: '',
+      lifeStressors: ['Married', 'Job Loss'],
+      date: '3/4/2018',
+      day: 'Monday',
       userId: 1
     }),
     Emotion.create({
-      color: 'orange',
-      day: 'Monday',
+      color: 'yellow',
+      number: 3,
+      journalEntry:
+        'Nec lucilius pertinax vituperata ne. At vis vocibus deterruisset. Sit prodesset forensibus adversarium ne. His cibo elitr offendit ut, dicat vitae vis in. Utamur prompta imperdiet nec id, ut eos omittam voluptatibus, mel te quem forensibus',
+      imageUrl: '',
+      lifeStressors: ['Married', 'Job Loss', 'Retirement'],
+      date: '3/3/2019',
+      day: 'Sunday',
+      userId: 2
+    }),
+    Emotion.create({
+      color: 'green',
       number: 4,
       journalEntry:
         'Nec lucilius pertinax vituperata ne. At vis vocibus deterruisset. Sit prodesset forensibus adversarium ne. His cibo elitr offendit ut, dicat vitae vis in. Utamur prompta imperdiet nec id, ut eos omittam voluptatibus, mel te quem forensibus',
       imageUrl: '',
+      lifeStressors: ['Married', 'Job Loss', 'Retirement'],
+      date: '3/5/2019',
+      day: 'Tuesday',
+      userId: 2
+    }),
+    Emotion.create({
+      color: 'blue',
+      number: 5,
+      journalEntry:
+        'Nec lucilius pertinax vituperata ne. At vis vocibus deterruisset. Sit prodesset forensibus adversarium ne. His cibo elitr offendit ut, dicat vitae vis in. Utamur prompta imperdiet nec id, ut eos omittam voluptatibus, mel te quem forensibus',
+      imageUrl: '',
+      lifeStressors: ['Married', 'Job Loss', 'Retirement'],
+      date: '3/6/2019',
+      day: 'Wednesday',
       userId: 2
     })
   ])
